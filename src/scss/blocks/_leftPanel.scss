@@ -1,0 +1,65 @@
+.left__wrapper {
+  display: flex;
+}
+
+.leftPanel {
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  height: 100vh;
+  max-width: 80px;
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.leftPanel__indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.leftPanel__indicator {
+  border: none;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  &:nth-child(1) {
+    background: #ff6059;
+  }
+  &:nth-child(2) {
+    background: #ffc02f;
+  }
+  &:nth-child(3) {
+    background: #28ca42;
+  }
+}
+
+.leftPanel__add-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #222;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  border: none;
+  transform: translateX(-50%);
+
+  &::before,
+  &::after {
+    height: 2px;
+    width: 15px;
+    background: #777;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    height: 15px;
+    width: 2px;
+  }
+}

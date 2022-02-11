@@ -1,0 +1,99 @@
+.nav {
+  padding: 35px 25px 15px;
+  background: #25272a;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  max-width: 260px;
+  width: 100%;
+  color: #fff;
+}
+
+.nav__wrapperTop {
+  display: flex;
+  position: relative;
+}
+.nav__nomad-list {
+  font-size: 20px;
+  position: relative;
+  max-width: 102px;
+  width: 100%;
+  font-family: "Lato-bold";
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: -15px;
+    width: 12px;
+    height: 7px;
+    background: url(../../img/nav/nomad-after.svg);
+  }
+}
+
+.nav__settings-btn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav__treads {
+  font-size: 14px;
+  align-self: flex-start;
+  color: #b5b5b5;
+  margin: 30px 0 30px;
+  border: none;
+  background: transparent;
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    background: url(../../img/nav/treads-before.svg);
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: -5px;
+  }
+}
+
+.nav__channel {
+  position: relative;
+  list-style: none;
+  color: #b5b5b5;
+
+  &::before {
+    position: absolute;
+    left: -7px;
+    transform: translate(-50%);
+    content: "#";
+  }
+}
+
+.nav__channels {
+  ul {
+    max-height: 330px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  ul::-webkit-scrollbar {
+    // background-color: transparent;
+  }
+  ul::-webkit-thumb {
+    height: 140px;
+    width: 6px;
+    background: #566;
+  }
+}
+
+.nav__friends {
+  ul {
+    max-height: 280px;
+    overflow-y: scroll;
+  }
+}
