@@ -1,0 +1,62 @@
+.chat-bottom {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.25);
+  padding: 10px;
+  margin-right: -10px;
+  position: absolute;
+  width: 100%;
+
+  span {
+    margin: 5px 10px;
+  }
+  input,
+  textarea {
+    border: none;
+    margin: 5px;
+    outline: none;
+    width: 100%;
+    resize: none;
+    height: 60px;
+    padding: 20px 0;
+    :focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    :focus::-moz-placeholder {
+      color: transparent;
+    }
+    :focus:-moz-placeholder {
+      color: transparent;
+    }
+    :focus:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.input__file_img {
+  font-size: 20px;
+}
+
+.voice__button_span {
+  font-size: 20px;
+}
+
+.chat-bottom__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-bottom__smile-wrapper {
+  width: 25px;
+  height: 25px;
+  margin: 0 60px 0 30px;
+}
+
+.icon-smile {
+  background: url(../img/chat/Iconsmile.png) center center/cover no-repeat;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}

@@ -1,13 +1,18 @@
 .nav {
-  padding: 35px 25px 15px;
-  background: #25272a;
+  padding: 35px 5px 20px 20px;
+  background: rgba($color: #25272a, $alpha: 0.75);
   mix-blend-mode: normal;
-  opacity: 0.75;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 100vh;
   max-width: 260px;
   width: 100%;
   color: #fff;
+  transform: translateX(-260px);
+  transition: 0.5s;
+}
+
+.nav.active {
+  transform: translateX(0);
 }
 
 .nav__wrapperTop {
@@ -17,19 +22,30 @@
 .nav__nomad-list {
   font-size: 20px;
   position: relative;
-  max-width: 102px;
+  max-width: 130px;
   width: 100%;
   font-family: "Lato-bold";
+  padding-right: 20px;
+  cursor: pointer;
 
-  &::after {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-    right: -15px;
-    width: 12px;
-    height: 7px;
-    background: url(../../img/nav/nomad-after.svg);
+    top: 30%;
+    right: 3px;
+    height: 12px;
+    width: 7px;
+    transform: rotate(45deg);
+    border-right: 1px solid #fff;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+    right: -20px;
+    right: 7px;
+    border-right: none;
+    border-left: 1px solid #fff;
   }
 }
 
@@ -45,7 +61,7 @@
 .nav__treads {
   font-size: 14px;
   align-self: flex-start;
-  color: #b5b5b5;
+  color: $main-grey;
   margin: 30px 0 30px;
   border: none;
   background: transparent;
@@ -53,7 +69,7 @@
   padding-left: 25px;
 
   &::before {
-    background: url(../../img/nav/treads-before.svg);
+    background: url(../img/nav/treads-before.svg);
     position: absolute;
     content: "";
     width: 16px;
@@ -62,14 +78,22 @@
   }
 }
 
+.nav__content {
+  height: calc(100vh - 160px);
+  display: grid;
+}
+
 .nav__channel {
   position: relative;
   list-style: none;
-  color: #b5b5b5;
+  color: $main-grey;
+  margin: 20px 0 20px 10px;
+  padding-left: 10px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
-    left: -7px;
+    left: 0px;
     transform: translate(-50%);
     content: "#";
   }
@@ -77,23 +101,54 @@
 
 .nav__channels {
   ul {
-    max-height: 330px;
+    height: 40vh;
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-  ul::-webkit-scrollbar {
-    // background-color: transparent;
-  }
-  ul::-webkit-thumb {
-    height: 140px;
-    width: 6px;
-    background: #566;
+    margin-bottom: 30px;
   }
 }
 
 .nav__friends {
   ul {
-    max-height: 280px;
+    max-height: 25vh;
+
     overflow-y: scroll;
+    /* max-height: 280px; */
   }
+}
+
+.nav__friend {
+  color: #666666;
+
+  /* list-style: none;
+  text-transform: capitalize;
+  color: $main-grey;
+  position: relative;
+  padding-left: 10px;
+  &::marker {
+    color: red;
+  }
+  &::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #666666;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  } */
+
+  margin: 10px 0 10px 25px;
+  img {
+    margin: 0 10px;
+  }
+  button {
+    color: $main-grey;
+  }
+}
+
+.nav__friend.active {
+  color: #70cc16;
 }

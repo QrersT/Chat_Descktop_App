@@ -1,0 +1,93 @@
+button {
+  border: none;
+  background: transparent;
+}
+
+.channels-count,
+.friends-count {
+  position: relative;
+  font-size: 12px;
+  text-align: start;
+  font-family: "Lato-bold";
+  border: none;
+  background: transparent;
+  color: #919191;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.channels__btns,
+.friends-avatar {
+  display: block;
+  border: none;
+  background: transparent;
+  margin: 0 0 15px 15px;
+  padding-left: 10px;
+}
+
+.status__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666666;
+}
+
+/* .status__indicator active{
+
+} */
+
+.message__btn {
+  background: #3577ef;
+  padding: 4px 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.more__btn {
+  width: 26px;
+  height: 26px;
+  background: #3577ef;
+  border-radius: 5px;
+  align-self: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    border-top: 7px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.right-panel__close-btn {
+  background: url(../img/right-panel/right-panel-vector.svg) center center/cover
+    no-repeat;
+  width: 9px;
+  height: 15px;
+  border: none;
+  padding: 5px;
+  position: fixed;
+  bottom: 42px;
+  right: 30px;
+  transition: 0.3s all;
+  outline: none;
+}
+
+.right-panel__close-btn.active {
+  transform: rotate(180deg);
+  transition: 0.3s all;
+}
+
+.star__btn.active {
+  svg {
+    fill: yellow;
+    path {
+      stroke: yellow;
+    }
+  }
+}

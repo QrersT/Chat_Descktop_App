@@ -1,6 +1,14 @@
 @import "base/bootstrap-reboot";
 @import "base/fonts";
+@import "base/vars";
+@import "base/icons";
 
 @import "blocks/nav";
-@import "blocks/leftPanel";
-@import "blocks/any";
+@import "blocks/left-panel";
+@import "blocks/btns";
+@import "blocks/right-panel";
+@import "blocks/scrollbar";
+@import "blocks/star";
+@import "blocks/chat-content";
+@import "blocks/chat-header";
+@import "blocks/chat-footer";

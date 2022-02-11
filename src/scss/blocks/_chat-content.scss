@@ -1,0 +1,138 @@
+.chat {
+  width: calc(100% - 540px);
+  background: #fff;
+  height: 100vh;
+  margin-left: $bar-width;
+  transition: 0.5s all;
+  padding-right: 10px;
+  position: relative;
+}
+
+.chat.active-right {
+  width: calc(100% - 340px);
+  transition: 0.5s all;
+}
+.chat.active-left {
+  transition: 0.5s all;
+  transform: translateX(-260px);
+  width: calc(100% - 280px);
+}
+.chat.active-right.active-left {
+  width: calc(100% - 80px);
+
+  transition: 0.5s all;
+}
+
+.chat__content {
+  overflow-x: auto;
+  height: calc(100vh - 155px);
+  padding: 20px 20px 0 20px;
+}
+
+.chat__user {
+  margin: 20px 0 10px;
+}
+
+.user__avatar {
+  margin-right: 20px;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.user__top-wrapper {
+  display: inline-block;
+}
+
+.user__name {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "lato-bold";
+  position: relative;
+}
+.user__img-wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.user__img {
+  margin: 15px 15px;
+  width: 270px;
+  display: block;
+}
+
+.user__text {
+  padding-right: 70px;
+}
+
+.user__text-smile {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.message__time {
+  color: #8d8d8d;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.writed__time {
+  margin: 20px 0 10px;
+  text-align: center;
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: rgba($color: #000000, $alpha: 0.16);
+  p {
+    color: #8d8d8d;
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 0 20px;
+  }
+
+  /* &::after,
+  &::before {
+    top: 10px;
+    right: 0px;
+    width: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    left: 0;
+  } */
+}
+
+.writing__field {
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blue__link {
+  color: #3577ef;
+  cursor: pointer;
+}
+
+//chat scroll
+.chat {
+  overflow-x: auto;
+}
+.chat::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f9f9fd;
+}
+
+input[type="file"] {
+  display: none;
+}

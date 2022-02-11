@@ -1,0 +1,18 @@
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #ffffff, $alpha: 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat__content::-webkit-scrollbar-thumb {
+  background: rgba($color: #4d4d4d, $alpha: 0.2);
+  border-radius: 3px;
+  transform: translateX(15px);
+}
+
+/* .chat__content::-webkit-scrollbar-track {
+  height: 200px;
+} */
