@@ -1,5 +1,5 @@
 {
-  "name": "chat_descktop_app",
+  "name": "runsmart-1",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,19 +8,32 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0"
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.39.2"
   },
   "browserslist": [
     "last 2 version",
     "> 1%",
-    "not dead",
-    "maintained node versions"
+    "maintained node versions",
+    "not dead"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QrersT/Chat_Descktop_App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QrersT/Chat_Descktop_App/issues"
+  },
+  "homepage": "https://github.com/QrersT/Chat_Descktop_App#readme",
   "description": ""
 }
